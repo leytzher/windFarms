@@ -1,0 +1,65 @@
+#windy #bottom,
+#windy #mobile-ovr-select,
+#windy #embed-zoom {
+    display: none !important;
+}
+
+#windy #logo-wrapper {
+    top: initial;
+    bottom: 40px;
+}
+
+#windy #logo-wrapper #logo {
+    right: 500px;
+}
+
+/* main.css: Add and override styles */
+.dc-data-count small {
+    font-size: 16px;
+  }
+  
+  body {margin:10px;
+        padding:30px;
+    }
+
+    html body {
+        background-color:#F8F9FA;
+    
+    }
+    
+
+  .container-fluid {
+    padding-left: 40px;
+    padding-right: 40px;
+   
+  }
+  
+  .pie-chart1{
+    height: 150px;
+    
+  }
+
+  .pie-chart3{
+
+    margin-top: -22%;
+    
+  }
+  
+  .dc-chart .axis text{
+    font-size: 12px;
+  }
+  
+  text {
+    font-size: 16px;
+  }
+  
+  #map {
+    height: 150px;
+  }
+  
+  #control-row {
+    padding-bottom: 20px;
+  }
+  
+  a { cursor: pointer }
+

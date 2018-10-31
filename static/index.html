@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Untitled</title>
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+    <link rel="stylesheet" href="/style/style.css"/>
+    <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+    <script src="https://api4.windy.com/assets/libBoot.js"></script>
+    <script src="https://unpkg.com/leaflet-lasso@latest/dist/leaflet-lasso.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.4.6/crossfilter.min.js"><</script>
+    <script src="http://unpkg.com/dc@3/dc.js"></script>
+    <link rel="stylesheet" href="http://unpkg.com/dc@3/dc.css"/>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+
+    <style>
+
+</style>
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+     <img src="logo.png" width="248.5" height="50" class="d-inline-block align-top" alt="">  
+      
+    </a>
+  </nav>
+
+<div class="container-fluid" >
+
+<!-- Display title and number of selected records -->
+  <div class='row'>
+    <div class="col-xs-12 dc-data-count dc-chart center-block" id='data-count'>
+      <h2>Windfarm Capacity in the U.K. [DEMO]
+        <br>
+        <small>
+          <span class="filter-count"></span> selected out of <span class="total-count"></span> records |
+          <a id="all" href="#">Reset All</a>
+        </small>
+      </h2>
+    </div>
+  </div>
+
+<!-- Display bar chart -->
+  <div class="row" id="control-row">
+    <div class="col-md-6 pie-chart1">
+      <h4>Installed Capacity per Country <small><a id="capacity">| Reset</a></small></h4>
+      <div class="dc-chart" id="chart-installed-capacity"></div>
+    </div>
+
+    <div class="col-md-6">
+      <h4>Real Time Wind Map
+      <div id="windy" style="height: 550px; width: 550px; margin-top: 50px; position: relative; outline: none;"></div>
+    </div>
+
+<!--
+    <div class="col-md-2 pie-chart2">
+          <h4>Projects per Region <small><a id="region">| Reset</a></small></h4>
+          <div class="dc-chart" id="chart-region"></div>
+    </div>
+-->
+
+    <div class="col-md-6 col-md-push-100 pie-chart3">
+      <h4>Installed Capacity by Status <small><a id="status">| Reset</a></small></h4>
+      <div class="dc-chart" id="chart-region-mw"></div>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="col-md-12">
+<h4>Top 10 projects by Installed Capacity (current selection)</h4>
+<table class="table table-bordered table-striped" id="data-table">
+  <thead>
+    <tr class="header">
+      <th>Site Name</th>
+      <th>Region</th>
+      <th>Status</th>
+      <th>Installed Capacity (MW)</th>
+      <th>Number of Turbines</th>
+      <th>Turbine Capacity</th>
+
+    </tr>
+  </thead>
+</table>
+</div>
+
+<p>Data Source: </p>
+<p>(c) 2018. White Space Energy</p>
+
+<script type="text/javascript" src="/scripts/script.js"></script>
+</body>
+</html>
+
+

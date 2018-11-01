@@ -63,3 +63,22 @@
   
   a { cursor: pointer }
 
+#all{
+  color: #00f;
+  font-size: 0.8em;
+}
+
+#region{
+  color: #00f;
+  font-size: 0.8em;
+}
+
+#capacity{
+  color: #00f;
+  font-size: 0.8em;
+}
+
+#status{
+  color: #00f;
+  font-size: 0.8em;
+}

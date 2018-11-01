@@ -213,6 +213,51 @@ _.each(dcCharts, function (dcChart) {
 
 dc.renderAll();
 
-      
+// Utility Functions:
+function convertArrayOfObjectsToCSV(args) {  
+  var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+
+  data = args.data || null;
+  if (data == null || !data.length) {
+      return null;
+  }
+
+  columnDelimiter = args.columnDelimiter || ',';
+  lineDelimiter = args.lineDelimiter || '\n';
+
+  keys = Object.keys(data[0]);
+
+  result = '';
+  result += keys.join(columnDelimiter);
+  result += lineDelimiter;
+
+  data.forEach(function(item) {
+      ctr = 0;
+      keys.forEach(function(key) {
+          if (ctr > 0) result += columnDelimiter;
+
+          result += item[key];
+          ctr++;
+      });
+      result += lineDelimiter;
+  });
+
+  return result;
+}
+
+
+// Export as csv
+var btn = document.getElementById("export")
+btn.addEventListener("click",()=>{
+  console.log("clicked")
+  console.log(allDim.top(Infinity));
+  out = allDim.top(Infinity);
+  var blob = new Blob([d3.csvFormat(allDim.top(Infinity))],{type: "text/csv;charset=utf-8"});
+  saveAs(blob, 'data.csv');
+});
+
+
+
+
 });
 
